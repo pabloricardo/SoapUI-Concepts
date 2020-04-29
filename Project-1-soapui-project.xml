@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="15e4bbdc-fc26-4df1-b358-fdd4ca69e2ca" activeEnvironment="Default" name="Project 1" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite id="084c4cb5-3084-42d3-b51d-9fbbc23f50ce" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7f881aa9-10e2-4eec-ab90-f8d7d240df19" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Groovy Intro" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Functions" id="f11b3389-cff2-49dc-9c50-51534c4390d7"><con:settings/><con:config><script>Employees.log = log;
+
+Employees e1 = new Employees();
+
+
+e1.name = "Mariana";
+e1.salary = 1000;
+
+e1.printEmployee();
+def sal = e1.getSalary(1000);
+log.info sal;
+
+def add1 = e1.add(11,7);
+def add2 = e1.add(1,3,5,7);
+log.info add1;
+log.info add2;
+
+
+
+
+public class Employees{
+	def static log;
+	def name;
+	def salary;
+	def dept;
+
+	public void printEmployee(){
+		log.info"Employee name is: $name";
+	}
+
+	public def getSalary(def amount){
+		salary += amount;
+		return salary;
+	}
+
+	public def add(a,b,c=0,d=9){
+		return a+b+c+d;
+	}
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
