@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="15e4bbdc-fc26-4df1-b358-fdd4ca69e2ca" activeEnvironment="Default" name="Project 1" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite id="084c4cb5-3084-42d3-b51d-9fbbc23f50ce" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7f881aa9-10e2-4eec-ab90-f8d7d240df19" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Groovy Intro" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Functions" id="f11b3389-cff2-49dc-9c50-51534c4390d7"><con:settings/><con:config><script>Employees.log = log;
+<con:soapui-project id="15e4bbdc-fc26-4df1-b358-fdd4ca69e2ca" activeEnvironment="Default" name="Project 1" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite id="084c4cb5-3084-42d3-b51d-9fbbc23f50ce" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7f881aa9-10e2-4eec-ab90-f8d7d240df19" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Groovy Intro" searchProperties="true"><con:settings/><con:testStep type="groovy" name="ClassAndFunctions" id="f11b3389-cff2-49dc-9c50-51534c4390d7"><con:settings/><con:config><script>Employees.log = log;
 
 Employees e1 = new Employees();
 
@@ -38,4 +38,42 @@ public class Employees{
 		return a+b+c+d;
 	}
 }
-</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a1989d4b-54ca-4edf-b787-abb3d6525994" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Array" searchProperties="true"><con:settings/><con:testStep type="groovy" name="ExampleArray" id="753b5b99-f787-4263-bad0-84705198dee6"><con:settings/><con:config><script>def x = new String[3];
+x[0] = "Chocolate";
+x[1] = "Pizza";
+x[2] = "Hambúrguer";
+
+for(def element : x){
+	log.info element;
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fe489d23-afa0-4e05-a627-e2aaa18f76da" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ArrayListAndHashSet" searchProperties="true"><con:settings/><con:testStep type="groovy" name="ArrayList" id="aef67a1c-257d-480f-9dbf-adec39a3e20a"><con:settings/><con:config><script>ArrayList list = new ArrayList();
+
+list.add("Futebol");
+list.add("Bola");
+list.add("Gol");
+
+log.info list.size();
+
+for(def element : list){
+	log.info element;
+}
+</script></con:config></con:testStep><con:testStep type="groovy" name="HashSet" id="12e7ce43-cff8-4e94-9637-d8d5f08b3a1f"><con:settings/><con:config><script>HashSet set = new HashSet();
+
+set.add("Superman");
+set.add("Goku");
+set.add("Naruto");
+
+log.info set.size();
+
+for(def el : set){
+	log.info(el);
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a3fe68c4-d905-4379-8b91-ca1b082dcf26" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Properties" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Properties" id="0e18d769-c7ff-4a3b-8fdb-5c9b1f7eb41f"><con:settings/><con:config><script>Properties prop = new Properties();
+def path = "C:\\soapui.properties";
+
+FileInputStream input = new FileInputStream(path);
+prop.load(input);
+
+log.info prop.getProperty("name");
+log.info prop.getProperty("url");
+log.info prop.getProperty("site");</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
