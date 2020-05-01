@@ -1,0 +1,3 @@
+name=SoapUI Name
+url=http://localhost:1123
+site=www.soapui.com.br
