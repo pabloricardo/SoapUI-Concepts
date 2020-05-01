@@ -76,4 +76,8 @@ prop.load(input);
 
 log.info prop.getProperty("name");
 log.info prop.getProperty("url");
-log.info prop.getProperty("site");</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+log.info prop.getProperty("site");</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f21dc632-4b37-4b30-8933-918e211c4011" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Read_Jar_Properties" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read_Jar" id="3ac64ff8-d451-4302-8462-59ab00ff9ca6"><con:settings/><con:config><script>import com.soapui.readFile;
+
+ReadProperties prop = new ReadProperties("C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\lib\\prop.txt");
+
+log.info prop.getProperties("name");</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
